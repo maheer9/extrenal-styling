@@ -1,0 +1,58 @@
+<html>
+<head>
+    <link rel="stylesheet" href="prog.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="main-video-container">
+            <video id="main-video" controls>
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="thumbnail-container">
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+            <video class="thumbnail" data-src="video2.mp4" muted>
+                <source src="video2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainVideo = document.getElementById('main-video');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    const newSrc = this.getAttribute('data-src');
+                    if (mainVideo.querySelector('source').src !== newSrc) {
+                        mainVideo.querySelector('source').src = newSrc;
+                        mainVideo.load();
+                        mainVideo.play();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
