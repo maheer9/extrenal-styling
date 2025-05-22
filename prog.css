@@ -1,0 +1,151 @@
+.container{
+    background-color: red;
+    display:flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    justify-content: space-around;
+}
+.p{
+    color:aqua;
+    font-family: 30;
+    padding:25px;
+    display:inline;
+}
+
+/* Download icon animation */
+.download-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: pulse 2s infinite;
+    stroke: #eee;
+}
+
+.download-icon:hover {
+    animation: bounce 0.6s infinite;
+    stroke: #1e90ff;
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.page-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.video-background {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 8px;
+    width: 70%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.video-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    width: 100%;
+    justify-content: flex-start;
+}
+video {
+    width: 150px;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin: 10px;
+}
+.flowers-container {
+    display: flex;
+    gap: 10px;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.flower {
+    width: 50px;
+    height: 50px;
+    background-image: url('flower.png'); /* Assuming flower.png is present */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.video-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(25% - 10px);
+    box-sizing: border-box;
+}
+.download-link {
+    margin-top: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #007bff;
+}
+.download-link:hover {
+    text-decoration: underline;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.main-video-container {
+    width: 80%;
+    max-width: 900px;
+    margin-bottom: 20px;
+}
+.main-video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.thumbnail-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    width: 80%;
+    max-width: 900px;
+}
+.thumbnail {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: border-color 0.3s ease;
+}
+.thumbnail:hover, .thumbnail.active {
+    border-color: #007bff;
+    box-shadow: 0 0 10px #007bff;
